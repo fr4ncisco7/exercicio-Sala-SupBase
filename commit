@@ -1,0 +1,57 @@
+CREATE TABLE alunos (
+    id SERIAL PRIMARY KEY,
+    nome TEXT NOT NULL,
+    turma TEXT NOT NULL,
+    curso TEXT NOT NULL,
+    data_nascimento DATE
+);
+
+CREATE TABLE cursos (
+    id SERIAL PRIMARY KEY,
+    nome TEXT NOT NULL,
+    duracao_anos INT
+);
+
+CREATE TABLE matriculas (
+    id SERIAL PRIMARY KEY,
+    aluno_id INT REFERENCES alunos(id) ON DELETE CASCADE,
+    curso_id INT REFERENCES cursos(id) ON DELETE CASCADE,
+    data_matricula DATE DEFAULT CURRENT_DATE
+);
+
+INSERT INTO alunos (nome, turma, curso, data_nascimento)
+VALUES ('Roberto Carlos', '1B', 'Engenharia Software', '2002-05-10'),
+       ('Neymar', '1B', 'Ciências da Computação', '2000-05-06'),
+       ('Eloisa Borges', '1B', 'Engenharia da Computação', '2007-04-28'),
+       ('Regina Lima', '1A', 'Adm Tech', '2003-02-18'),
+       ('Ana Lima', '1C', 'Engenharia Software', '2005-05-05'),
+       ('Ana Lima', '1A', 'Ciências da Computação', '2001-09-07'),
+       ('Ana Lima', '1C', 'Engenharia Software', '2006-05-22'),
+       ('Ana Lima', '1B', 'Engenharia da Computação', '2004-01-10'),
+       ('Ana Lima', '1A', 'Ciências da Computação', '2006-11-13'),
+       ('Ana Lima', '1C', 'Engenharia da Computação', '2000-08-18');
+
+INSERT INTO cursos (nome, duracao_anos)
+VALUES ('Engenharia de Software', 5),
+       ('Ciências da Computação', 4),
+       ('Engenharia da Computação', 4),
+       ('Adm Tech', 4),
+       ('Engenharia de Software', 4),
+       ('Ciências da Computação', 4),
+       ('Engenharia de Software', 4),
+       ('Engenharia da Computação', 4),
+       ('Ciências da Computação', 4),
+       ('Engenharia da Computação', 4);
+
+INSERT INTO matriculas (aluno_id, curso_id)
+VALUES (1, 1), 
+       (2, 2), 
+       (3, 3), 
+       (4, 4), 
+       (5, 1), 
+       (6, 2), 
+       (7, 1), 
+       (8, 3), 
+       (9, 2), 
+       (10, 3); 
+
