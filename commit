@@ -25,11 +25,11 @@ VALUES ('Roberto Carlos', '1B', 'Engenharia Software', '2002-05-10'),
        ('Eloisa Borges', '1B', 'Engenharia da Computação', '2007-04-28'),
        ('Regina Lima', '1A', 'Adm Tech', '2003-02-18'),
        ('Ana Lima', '1C', 'Engenharia Software', '2005-05-05'),
-       ('Ana Lima', '1A', 'Ciências da Computação', '2001-09-07'),
-       ('Ana Lima', '1C', 'Engenharia Software', '2006-05-22'),
-       ('Ana Lima', '1B', 'Engenharia da Computação', '2004-01-10'),
-       ('Ana Lima', '1A', 'Ciências da Computação', '2006-11-13'),
-       ('Ana Lima', '1C', 'Engenharia da Computação', '2000-08-18');
+       ('Alexandre', '1A', 'Ciências da Computação', '2001-09-07'),
+       ('Adriano', '1C', 'Engenharia Software', '2006-05-22'),
+       ('João Pedro', '1B', 'Engenharia da Computação', '2004-01-10'),
+       ('Flamengo', '1A', 'Ciências da Computação', '2006-11-13'),
+       ('Ricardo', '1C', 'Engenharia da Computação', '2000-08-18');
 
 INSERT INTO cursos (nome, duracao_anos)
 VALUES ('Engenharia de Software', 5),
